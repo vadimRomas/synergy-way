@@ -3,5 +3,5 @@ ___
 ## build project
 ```docker-compose build```
 
-##start project
+## start project
 ```docker-compose up```
