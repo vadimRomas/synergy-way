@@ -2,5 +2,6 @@
 ___
 ## build project
 ```docker-compose build```
+
 ##start project
-```docker-compose up```# synergy-way
+```docker-compose up```
