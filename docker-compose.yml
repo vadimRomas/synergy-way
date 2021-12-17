@@ -1,0 +1,44 @@
+version: "3.7"
+
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./djangoProject:/app
+    environment:
+      - POSTGRES_DB=synergy_way
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=user
+    restart: on-failure
+    depends_on:
+      - db
+    command: >
+      python manage.py runserver 0.0.0.0:8000
+
+  db:
+    image: postgres:13.3
+    ports:
+    - "5432:5432"
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=user
+      - POSTGRES_DB=synergy_way
+    restart: on-failure
+    volumes:
+      - ./private/var/lib/postgresql:/var/lib/postgresql
+
+  web:
+    image: nginx:alpine
+    ports:
+    - "80:80"
+    restart: on-failure
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+
+

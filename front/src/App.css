@@ -1,0 +1,28 @@
+nav{
+  display: flex;
+  background-color: orangered;
+  width: 80%;
+  justify-content: space-between;
+}
+.main{
+  margin-top: 0.5%;
+  margin-left: 10%;
+}
+ul{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+li{
+  padding-left: 5%;
+  list-style-type: none;
+}
+.link{
+  list-style-type: none;
+  display: block;
+}
+.flex{
+  display: flex;
+  /*justify-content:;*/
+}
