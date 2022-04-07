@@ -27,7 +27,6 @@ SECRET_KEY = "django-insecure-#qjek35%tuizhuukch_%unphq+)3y!k&+!(j=-pk2xl6ke5&2q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -93,6 +92,9 @@ DATABASES = {
         "PASSWORD": "user",
         "HOST": "127.0.0.1",
         "PORT": "5432",
+        # 'TEST': {
+        #     'NAME': 'test_synergy_way',
+        # },
     }
 }
 
